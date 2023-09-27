@@ -17,7 +17,7 @@
   --LightGrayishBlue1: hsl(236, 33%, 92%); /* (hover) */
   --DarkGrayishBlue: hsl(234, 11%, 52%);
   --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
-  --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+  --VeryDarkGrayishBlue1: hsl(237, 14%, 26%);
 }
 
 * {
@@ -31,53 +31,92 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
 }
-img{
+img {
   max-width: 100%;
 }
 /* HEADER*/
-.header{
+.header {
   width: 100%;
   height: 300px;
   background-image: url(./images/bg-desktop-dark.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
+  z-index: 0;
 }
 /* TITLE & THEME SWITCHER*/
-.title-theme-div{
+.title-theme-div {
   position: absolute;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40%;
   height: 40px;
+  z-index: 9;
 }
 /* TITLE*/
-.title{
+.title {
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  /* font-size: 50px; */
+  letter-spacing: 20px;
   line-height: 40px;
 }
 /* THEME SWITHER*/
-.theme-switcher{
+.theme-switcher {
   width: 40px;
   height: 40px;
   padding-left: 14px;
   padding-top: 7px;
 }
-.theme-switcher img{
+.theme-switcher img {
   object-fit: cover;
   cursor: pointer;
 }
 /* APP */
-.app{
+.app {
   width: 100%;
   min-height: 100vh;
   background-color: var(--VeryDarkBlue);
 }
+/* MAIN */
+.main {
+  width: 40%;
+  margin: -5rem auto 0;
+  z-index: 99999;
+  position: relative;
+}
 /* FORM*/
+.form {
+  /* padding: 1rem; */
+  width: 100%;
+  position: relative;
+}
+/* INPUT */
+.input-div input {
+  width: 100%;
+  height: 65px;
+  padding: 1rem 1rem 1rem 4rem;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  background-color: var(--VeryDarkGrayishBlue1);
+  font-size: 18px;
+  color: var(--LightGrayishBlue);
+  margin-bottom: 2rem;
+}
+input::placeholder {
+  color: var(--DarkGrayishBlue);
+}
+.input-div .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid var(--DarkGrayishBlue);
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
