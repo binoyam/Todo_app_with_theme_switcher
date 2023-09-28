@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 :root {
   --BrightBlue: hsl(220, 98%, 61%);
-  --CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --CheckBackground: linear-gradient(105deg, #57ddff, #c058f3);
 
   /* LIGHT THEME COLORS*/
   /* --VeryLightGray: hsl(0, 0%, 98%);
@@ -28,6 +28,7 @@
 body {
   width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
 }
@@ -103,6 +104,7 @@ img {
   border: none;
   outline: none;
   background-color: var(--VeryDarkGrayishBlue1);
+  font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
   color: var(--LightGrayishBlue);
 }
@@ -122,7 +124,7 @@ input::placeholder {
 /* LIST */
 .list {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   list-style: none;
   border-radius: 7px;
   background-color: var(--VeryDarkGrayishBlue1);
@@ -139,6 +141,8 @@ input::placeholder {
   background-color: var(--VeryDarkGrayishBlue1);
   border-bottom: 1px solid var(--VeryDarkGrayishBlue);
   position: relative;
+  color: var(--LightGrayishBlue);
+  font-size: 18px;
 }
 /* CHECKBOX */
 .todo input[type="checkbox"] {
@@ -148,13 +152,18 @@ input::placeholder {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 1px solid var(--DarkGrayishBlue);
+  border: 10px solid var(--DarkGrayishBlue);
+  background-color: transparent;
   position: absolute;
   outline: none;
   cursor: pointer;
   top: 50%;
   left: 1.5rem;
   transform: translateY(-50%);
+}
+.todo input[type="checkbox"]:hover{
+  border: 10px solid linear-gradient(repeat, 5deg, #57ddff, #c058f3);
+
 }
 /* REMOVE BUTTON */
 .todo .remove-btn {
