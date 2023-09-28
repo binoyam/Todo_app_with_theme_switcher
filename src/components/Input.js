@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Input({ addTodo }) {
+function Input({ onAddTodo }) {
   const [newTodo, setNewTodo] = useState("");
 
   const handleInputChange = (e) => {
@@ -9,7 +9,7 @@ function Input({ addTodo }) {
     const handleAddTodo = (e) => {
       e.preventDefault();
     if (newTodo.trim() !== "") {
-      addTodo(newTodo);
+      onAddTodo(newTodo);
       setNewTodo("");
     }
   };
@@ -22,7 +22,7 @@ function Input({ addTodo }) {
           onChange={handleInputChange}
           value={newTodo}
         />
-        <span className="circle"></span>
+        <span onClick={handleAddTodo} className="circle"></span>
     </form>
   );
 }
