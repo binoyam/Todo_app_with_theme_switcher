@@ -84,7 +84,7 @@ img {
 /* MAIN */
 .main {
   width: 40%;
-  margin: -5rem auto 0;
+  margin: -8.3rem auto 0;
   z-index: 99999;
   position: relative;
 }
@@ -129,7 +129,7 @@ input::placeholder {
   overflow: hidden;
 }
 /* TODO */
-.todo{
+.todo {
   width: 100%;
   height: 65px;
   padding: 1rem 1.5rem 1rem 4rem;
@@ -138,13 +138,26 @@ input::placeholder {
   justify-content: space-between;
   background-color: var(--VeryDarkGrayishBlue1);
   border-bottom: 1px solid var(--VeryDarkGrayishBlue);
+  position: relative;
 }
 /* CHECKBOX */
-.todo .checkbox{
-
+.todo input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid var(--DarkGrayishBlue);
+  position: absolute;
+  outline: none;
+  cursor: pointer;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
 }
 /* REMOVE BUTTON */
-.todo .remove-btn{
+.todo .remove-btn {
   width: 50px;
   height: 50px;
   border: none;
