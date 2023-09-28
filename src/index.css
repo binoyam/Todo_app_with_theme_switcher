@@ -95,7 +95,7 @@ img {
   position: relative;
 }
 /* INPUT */
-.input-div input {
+.form input {
   width: 100%;
   height: 65px;
   padding: 1rem 1rem 1rem 4rem;
@@ -109,7 +109,7 @@ img {
 input::placeholder {
   color: var(--DarkGrayishBlue);
 }
-.input-div .circle {
+.form .circle {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -120,8 +120,33 @@ input::placeholder {
   transform: translateY(-50%);
 }
 /* LIST */
-.list{
-margin-top: 2rem;
-list-style: none;
-
+.list {
+  width: 100%;
+  margin-top: 2rem;
+  list-style: none;
+  border-radius: 7px;
+  /* overflow: hidden; */
+}
+/* TODO */
+.todo{
+  width: 100%;
+  height: 65px;
+  padding: 1rem 1.5rem 1rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--VeryDarkGrayishBlue1);
+  border-bottom: 1px solid var(--VeryDarkGrayishBlue);
+}
+/* REMOVE BUTTON */
+.remove-btn{
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

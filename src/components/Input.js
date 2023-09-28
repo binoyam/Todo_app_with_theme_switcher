@@ -1,29 +1,29 @@
 import React, { useState } from "react";
-import TodoList from "./TodoList";
 
-function Input() {
+function Input({ addTodo }) {
   const [newTodo, setNewTodo] = useState("");
 
   const handleInputChange = (e) => {
-    e.preventDefault();
-    setNewTodo(e.target.value);
+      setNewTodo(e.target.value);
+    };
+    const handleAddTodo = (e) => {
+      e.preventDefault();
+    if (newTodo.trim() !== "") {
+      addTodo(newTodo);
+      setNewTodo("");
+    }
   };
 
   return (
-    <>
-      <form className="form">
-        <div className="input-div">
-          <input
-            type="text"
-            placeholder="Create a new todo..."
-            onChange={handleInputChange}
-            value={newTodo}
-          />
-          <span className="circle"></span>
-        </div>
-      </form>
-      <TodoList />
-    </>
+    <form className="form" onSubmit={handleAddTodo}>
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          onChange={handleInputChange}
+          value={newTodo}
+        />
+        <span className="circle"></span>
+    </form>
   );
 }
 
