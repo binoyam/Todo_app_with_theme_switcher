@@ -1,5 +1,6 @@
 import React from "react";
 import crossIcon from "../images/icon-cross.svg";
+import { toBeChecked } from "@testing-library/jest-dom/matchers";
 
 function TodoList({ todos }) {
   console.log(todos);
@@ -13,11 +14,18 @@ function TodoList({ todos }) {
             <div>
             <input 
             className="checkbox"
-            type="checkbox" />
+            type="checkbox"
+            title="Mark as complete"
+            toBeChecked
+            />
             {todo}
             </div>
             <button className="remove-btn">
-            <img src={crossIcon} alt="remove icon" />
+            <img 
+            src={crossIcon} 
+            alt="remove icon"
+            title="Remove-Task"
+            />
             </button>
           </li>
         );
