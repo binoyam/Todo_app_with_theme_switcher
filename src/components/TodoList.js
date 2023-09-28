@@ -11,7 +11,9 @@ function TodoList({ todos }) {
           className="todo"
            key={index}>
             <div>
-            <input type="checkbox" />
+            <input 
+            className="checkbox"
+            type="checkbox" />
             {todo}
             </div>
             <button className="remove-btn">
