@@ -27,21 +27,17 @@ function App() {
 
   return (
     <div className="app">
-
       <Header />
 
       <main className="main">
-
         <Input onAddTodo={handleAddTodo} />
-        
+
         <TodoList
           todos={todos}
           onCompleteTodo={handleCompleteTodo}
           onRemoveTodo={handleRemoveTodo}
         />
-
       </main>
-      
     </div>
   );
 }
