@@ -164,6 +164,7 @@ input::placeholder {
   color: var(--LightGrayishBlue);
   font-size: 18px;
   cursor: pointer;
+  padding: 5px 5px 5px 0;
 }
 /* CHECKBOX */
 .todo input[type="checkbox"] {
