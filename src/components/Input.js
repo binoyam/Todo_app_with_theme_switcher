@@ -4,10 +4,11 @@ function Input({ onAddTodo }) {
   const [newTodo, setNewTodo] = useState("");
 
   const handleInputChange = (e) => {
-      setNewTodo(e.target.value);
-    };
-    const handleAddTodo = (e) => {
-      e.preventDefault();
+    setNewTodo(e.target.value);
+  };
+
+  const handleAddTodo = (e) => {
+    e.preventDefault();
     if (newTodo.trim() !== "") {
       onAddTodo(newTodo);
       setNewTodo("");
@@ -16,13 +17,13 @@ function Input({ onAddTodo }) {
 
   return (
     <form className="form" onSubmit={handleAddTodo}>
-        <input
-          type="text"
-          placeholder="Create a new todo..."
-          onChange={handleInputChange}
-          value={newTodo}
-        />
-        <span onClick={handleAddTodo} className="circle"></span>
+      <input
+        type="text"
+        placeholder="Create a new todo..."
+        onChange={handleInputChange}
+        value={newTodo}
+      />
+      <span onClick={handleAddTodo} className="circle"></span>
     </form>
   );
 }

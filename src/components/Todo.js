@@ -2,9 +2,11 @@ import React from "react";
 import crossIcon from "../images/icon-cross.svg";
 
 function Todo({ todo, onRemoveTodo, onCompleteTodo }) {
+
   const handleCompleteClick = () => {
     onCompleteTodo(todo.id);
   };
+
   const handleRemoveClick = () => {
     onRemoveTodo(todo.id);
   };
@@ -19,7 +21,9 @@ function Todo({ todo, onRemoveTodo, onCompleteTodo }) {
           checked={todo.completed}
           onChange={handleCompleteClick}
         />
-        {todo.newTodo}
+       <span className="todo-item">
+       {todo.newTodo}
+        </span> 
       </div>
       <button className="remove-btn">
         <img
