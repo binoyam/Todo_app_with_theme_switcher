@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import crossIcon from "../images/icon-cross.svg";
 
 function Todo({ todo, onRemoveTodo, onCompleteTodo }) {
@@ -13,23 +13,24 @@ function Todo({ todo, onRemoveTodo, onCompleteTodo }) {
 
   return (
     <li className="todo">
-      <div>
+   
         <input
+          id="checkbox"
           className="checkbox"
           type="checkbox"
-          title="Mark as complete"
+          title="Mark/Unmark completed"
           checked={todo.completed}
           onChange={handleCompleteClick}
         />
-       <span className="todo-item">
-       {todo.newTodo}
-        </span> 
-      </div>
+        <label htmlFor="checkbox" className="todo-item">
+          {todo.newTodo}
+        </label>
+      
       <button className="remove-btn">
         <img
           src={crossIcon}
           alt="remove icon"
-          title="Remove-Task"
+          title="Remove"
           onClick={handleRemoveClick}
         />
       </button>
