@@ -1,5 +1,6 @@
 import React from "react";
 import Todo from "./Todo";
+import Filter from "./Filter";
 
 function TodoList({ todos, onRemoveTodo, onCompleteTodo }) {
   // console.log(todos);
@@ -15,18 +16,7 @@ function TodoList({ todos, onRemoveTodo, onCompleteTodo }) {
           />
         );
       })}
-      <div className="controls">
-        <button className="items-left">
-          <span className="number">4 </span>
-          items left
-        </button>
-        <div className="list-controls">
-          <button className="all">All</button>
-          <button className="active">Active</button>
-          <button className="completed">Completed</button>
-        </div>
-        <button className="clear-all">Clear Completed</button>
-      </div>
+      <Filter />
     </ul>
   );
 }

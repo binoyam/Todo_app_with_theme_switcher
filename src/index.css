@@ -231,9 +231,20 @@ input::placeholder {
   font-family: "Josefin Sans", sans-serif ;
   font-size: 18px;
   color: var(--VeryDarkGrayishBlue);
+  cursor: pointer;
 }
 /* ALL BUTTON*/
 .list-controls .all{
+  color: var(--BrightBlue);
+  font-weight: 700;
+}
+.list-controls .active:hover{
+  color: var(--LightGrayishBlue);
+}
+.list-controls .completed:hover{
+  color: var(--LightGrayishBlue);
+}
+.list-controls .clear-all:hover{
   color: var(--BrightBlue);
   font-weight: 700;
 }
