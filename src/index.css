@@ -158,7 +158,22 @@ input::placeholder {
 .todo:hover .remove-btn {
   display: flex;
 }
-
+/* EMPTY TODO LIST */
+.empty-todo {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: var(--BrightBlue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  background-color: var(--VeryDarkDesaturatedBlue);
+  border-bottom: 1px solid var(--VeryDarkGrayishBlue);
+}
 /* TODO-ITEM */
 .todo-item {
   color: var(--LightGrayishBlue);
@@ -222,30 +237,30 @@ input::placeholder {
   justify-content: space-between;
   background-color: var(--VeryDarkDesaturatedBlue);
 }
-.list-controls{
+.list-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
-.controls button{
-  font-family: "Josefin Sans", sans-serif ;
+.controls button {
+  font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
   color: var(--VeryDarkGrayishBlue);
   cursor: pointer;
 }
 /* ALL BUTTON*/
-.list-controls .all{
+.list-controls .all {
   color: var(--BrightBlue);
   font-weight: 700;
 }
-.list-controls .active:hover{
+.list-controls .active:hover {
   color: var(--LightGrayishBlue);
 }
-.list-controls .completed:hover{
+.list-controls .completed:hover {
   color: var(--LightGrayishBlue);
 }
 
-.controls .clear-all:hover{
+.controls .clear-all:hover {
   color: var(--DarkGrayishBlue);
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Input from "./components/Input";
 import TodoList from "./components/TodoList";
+import Filter from "./components/Filter";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -25,6 +26,10 @@ function App() {
     setTodos(updatedTodos);
   };
 
+  const handleClearAll = () => {
+    setTodos([])
+  }
+
   return (
     <div className="app">
       <Header />
@@ -37,7 +42,10 @@ function App() {
           onCompleteTodo={handleCompleteTodo}
           onRemoveTodo={handleRemoveTodo}
         />
-        
+         <Filter 
+         todos={todos}
+         handleClearAll={handleClearAll}
+         />
       </main>
     </div>
   );
