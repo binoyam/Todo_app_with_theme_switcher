@@ -8,6 +8,16 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState("all");
 
+  const handleShowAll = () => {
+    setFilter("all");
+  };
+  const handleShowActive = () => {
+    setFilter("active");
+  };
+  const handleShowCompleted = () => {
+    setFilter("completed");
+  };
+
   const handleAddTodo = (newTodo) => {
     setTodos([{ id: Date.now(), newTodo, completed: false }, ...todos]);
   };
@@ -31,7 +41,7 @@ function App() {
     if (filter === "active") {
       return !todo.completed;
     } else if (filter === "completed") {
-      return todo.completed;
+      return todo.completed; 
     }
     return true;
   });
@@ -40,15 +50,6 @@ function App() {
     setTodos(updatedTodos);
   };
 
-  const handleShowAll = () => {
-    setFilter("all");
-  };
-  const handleShowActive = () => {
-    setFilter("active");
-  };
-  const handleShowCompleted = () => {
-    setFilter("completed");
-  };
   return (
     <div className="app">
       <Header />
