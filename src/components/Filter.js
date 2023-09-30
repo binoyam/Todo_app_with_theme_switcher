@@ -1,11 +1,20 @@
 import React from "react";
 
 function Filter({ todos, clearCompleted, showActive, showAll, showCompleted }) {
+  
+  const { id, completed } = todos;
+  const CountItemsLeft = () => {
+    return todos.filter((todo) => !todo.completed).length;
+  };
+
   return (
     <div className="controls">
       <button className="items-left">
-        <span className="number">4 </span>
-        items left
+        {todos.length < 1 ? (
+          <span className="number"> No Tasks Left</span>
+        ) : (
+          <span>{CountItemsLeft()}</span> + "Items left"
+        )}
       </button>
       <div className="list-controls">
         <button onClick={showAll} className="all">

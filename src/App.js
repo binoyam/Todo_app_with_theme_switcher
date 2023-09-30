@@ -68,6 +68,7 @@ function App() {
           showActive={handleShowActive}
           showAll={handleShowAll}
           showCompleted={handleShowCompleted}
+         
         />
       </main>
     </div>
