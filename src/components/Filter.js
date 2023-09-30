@@ -1,7 +1,6 @@
 import React from "react";
 
 function Filter({ todos, clearCompleted, showActive, showAll, showCompleted }) {
-
   const CountItemsLeft = () => {
     return todos.filter((todo) => !todo.completed).length;
   };
@@ -9,9 +8,11 @@ function Filter({ todos, clearCompleted, showActive, showAll, showCompleted }) {
   return (
     <div className="controls">
       <button className="items-left">
-        {CountItemsLeft() > 0 ? <span className="number">{CountItemsLeft()} Items Left</span>
-        : <span className="number">No Tasks Left</span>
-        }
+        {CountItemsLeft() > 0 ? (
+          <span className="number">{CountItemsLeft()} Items Left</span>
+        ) : (
+          <span className="number">No Tasks Left</span>
+        )}
       </button>
       <div className="list-controls">
         <button onClick={showAll} className="all">
@@ -21,11 +22,11 @@ function Filter({ todos, clearCompleted, showActive, showAll, showCompleted }) {
           Active
         </button>
         <button onClick={showCompleted} className="completed">
-          Completed
+        Completed
         </button>
       </div>
       <button onClick={clearCompleted} className="clear-all">
-        Clear Completed
+        Clear Completed 
       </button>
     </div>
   );

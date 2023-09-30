@@ -3,7 +3,11 @@ import Header from "./components/Header";
 import Input from "./components/Input";
 import TodoList from "./components/TodoList";
 import Filter from "./components/Filter";
-
+/* FUNCTIONS LEFT TO DO
+1, SHOW COMPLETE TASKS FUNCTION (NOT WORKING PROPERLY) 
+2, DRAG AND DROP FUNCTION
+3, THEME SWITCHER FUNCTION
+ */
 function App() {
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState("all");
