@@ -1,6 +1,6 @@
 import React from "react";
 
-function Filter({ todos, onClearCompleted }) {
+function Filter({ todos, clearCompleted, showActive, showAll, showCompleted }) {
   return (
     <div className="controls">
       <button className="items-left">
@@ -8,15 +8,19 @@ function Filter({ todos, onClearCompleted }) {
         items left
       </button>
       <div className="list-controls">
-        <button className="all">All</button>
-        <button className="active">Active</button>
-        <button 
-        
-        className="completed">
+        <button onClick={showAll} className="all">
+          All
+        </button>
+        <button onClick={showActive} className="active">
+          Active
+        </button>
+        <button onClick={showCompleted} className="completed">
           Completed
         </button>
       </div>
-      <button onClick={onClearCompleted}  className="clear-all">Clear Completed</button>
+      <button onClick={clearCompleted} className="clear-all">
+        Clear Completed
+      </button>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Filter from "./components/Filter";
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const [filter, setFilter] = useState("all");
 
   const handleAddTodo = (newTodo) => {
     setTodos([{ id: Date.now(), newTodo, completed: false }, ...todos]);
@@ -26,11 +27,28 @@ function App() {
     setTodos(updatedTodos);
   };
 
+  const filteredTodos = todos.filter((todo) => {
+    if (filter === "active") {
+      return !todo.completed;
+    } else if (filter === "completed") {
+      return todo.completed;
+    }
+    return true;
+  });
   const handleClearCompleted = () => {
-    const updatedTodos = todos.filter((todo) => !todo.completed)
-    setTodos(updatedTodos)
-  }
+    const updatedTodos = todos.filter((todo) => !todo.completed);
+    setTodos(updatedTodos);
+  };
 
+  const handleShowAll = () => {
+    setFilter("all");
+  };
+  const handleShowActive = () => {
+    setFilter("active");
+  };
+  const handleShowCompleted = () => {
+    setFilter("completed");
+  };
   return (
     <div className="app">
       <Header />
@@ -39,14 +57,17 @@ function App() {
         <Input onAddTodo={handleAddTodo} />
 
         <TodoList
-          todos={todos}
+          todos={filteredTodos}
           onCompleteTodo={handleCompleteTodo}
           onRemoveTodo={handleRemoveTodo}
         />
-         <Filter 
-         todos={todos}
-         onClearCompleted={handleClearCompleted}
-         />
+        <Filter
+          todos={filteredTodos}
+          clearCompleted={handleClearCompleted}
+          showActive={handleShowActive}
+          showAll={handleShowAll}
+          showCompleted={handleShowCompleted}
+        />
       </main>
     </div>
   );
