@@ -245,7 +245,7 @@ input::placeholder {
 .list-controls .completed:hover{
   color: var(--LightGrayishBlue);
 }
-.list-controls .clear-all:hover{
-  color: var(--BrightBlue);
-  font-weight: 700;
+
+.controls .clear-all:hover{
+  color: var(--DarkGrayishBlue);
 }
