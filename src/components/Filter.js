@@ -1,6 +1,6 @@
 import React from "react";
 
-function Filter({ todos, handleClearAll }) {
+function Filter({ todos, onClearCompleted }) {
   return (
     <div className="controls">
       <button className="items-left">
@@ -11,12 +11,12 @@ function Filter({ todos, handleClearAll }) {
         <button className="all">All</button>
         <button className="active">Active</button>
         <button 
-        onClick={handleClearAll} 
+        
         className="completed">
           Completed
         </button>
       </div>
-      <button className="clear-all">Clear Completed</button>
+      <button onClick={onClearCompleted}  className="clear-all">Clear Completed</button>
     </div>
   );
 }

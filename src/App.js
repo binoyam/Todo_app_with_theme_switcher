@@ -26,8 +26,9 @@ function App() {
     setTodos(updatedTodos);
   };
 
-  const handleClearAll = () => {
-    setTodos([])
+  const handleClearCompleted = () => {
+    const updatedTodos = todos.filter((todo) => !todo.completed)
+    setTodos(updatedTodos)
   }
 
   return (
@@ -44,7 +45,7 @@ function App() {
         />
          <Filter 
          todos={todos}
-         handleClearAll={handleClearAll}
+         onClearCompleted={handleClearCompleted}
          />
       </main>
     </div>
