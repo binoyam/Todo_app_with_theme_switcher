@@ -86,7 +86,6 @@ button {
   width: 100%;
   min-height: 100vh;
   background-color: var(--VeryDarkBlue);
-  padding-bottom: 5rem;
 }
 /* MAIN */
 .main {
@@ -289,9 +288,7 @@ input::placeholder {
   .title-theme-div {
     width: 65%;
   }
-  .app {
-    padding-bottom: 10rem;
-  }
+
   .list-controls {
     top: 5rem;
     transform: translate(-50%, 0);
@@ -302,36 +299,40 @@ input::placeholder {
     background-color: var(--VeryDarkDesaturatedBlue);
   }
 }
-@media only screen and (max-width: 700px){
-  .header{
+@media only screen and (max-width: 700px) {
+  .header {
     background-image: url(./images/bg-mobile-dark.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .main,
-  .title-theme-div{
+  .title-theme-div {
     width: 80%;
   }
-  .empty-todo{
+  .empty-todo {
     font-size: 25px;
   }
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
   .form input,
   .todo-item,
-  .controls button{
+  .controls button {
     font-size: 16px;
   }
-  
   .main,
-  .title-theme-div{
+  .title-theme-div {
     width: 90%;
   }
-  .title{
+ 
+  .title {
     letter-spacing: 10px;
   }
-  .empty-todo{
+  .empty-todo {
     font-size: 20px;
   }
+  .remove-btn{
+    right: 1rem;
+  }
+
 }
