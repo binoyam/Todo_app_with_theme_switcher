@@ -18,8 +18,14 @@ function App() {
   const handleShowActive = () => {
     setFilter("active");
   };
+  /*  CHECK IF THERE ARE COMPLETED TODOS AND THEN SET THE FILTER*/
   const handleShowCompleted = () => {
-    setFilter("completed");
+    const completedTodos = todos.filter((todo) => todo.completed);
+    if (completedTodos.length > 0) {
+      setFilter("completed");
+    } else {
+      setFilter("all");
+    }
   };
 
   const handleAddTodo = (newTodo) => {
@@ -45,16 +51,16 @@ function App() {
     if (filter === "active") {
       return !todo.completed;
     } else if (filter === "completed") {
-      const completedTodos = todos.filter((todo) => todo.completed);
-      if (completedTodos.length > 0) {
-        return completedTodos.length > 0 ? todo.completed : !todo.completed;
-      }
+      return todo.completed;
     }
     return true;
   });
   const handleClearCompleted = () => {
     const updatedTodos = todos.filter((todo) => !todo.completed);
     setTodos(updatedTodos);
+    if (todos.length > 0) {
+      setFilter("all");
+    }
   };
 
   return (
