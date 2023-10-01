@@ -141,6 +141,7 @@ input::placeholder {
   border-radius: 7px;
   background-color: var(--VeryDarkGrayishBlue1);
   overflow: hidden;
+  box-shadow: 0px 5px 10px 2px var(--VeryDarkDesaturatedBlue);
 }
 /* TODO ROW */
 .todo {
@@ -236,6 +237,7 @@ input::placeholder {
   align-items: center;
   justify-content: space-between;
   background-color: var(--VeryDarkDesaturatedBlue);
+  position: relative;
 }
 .list-controls {
   display: flex;
@@ -265,8 +267,17 @@ input::placeholder {
   color: var(--DarkGrayishBlue);
 }
 /* STYLING TASKS LEFT TO DO
-1, COLORING
 2, LAYOUT (CONTROLS)
 3, RESPONSIVENESS
 4, THEME SWITHER
  */
+ @media only screen and (max-width:1350px) {
+  .main{
+    width: 55%;
+  }
+ }
+ @media only screen and (max-width:950px) {
+  .main{
+    width: 65%;
+  }
+ }

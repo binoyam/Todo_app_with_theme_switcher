@@ -4,7 +4,6 @@ import Input from "./components/Input";
 import TodoList from "./components/TodoList";
 import Filter from "./components/Filter";
 /* FUNCTIONS LEFT TO DO
-1, SHOW COMPLETE TASKS FUNCTION (NOT WORKING PROPERLY) 
 2, DRAG AND DROP FUNCTION
 3, THEME SWITCHER FUNCTION
  */
@@ -21,11 +20,10 @@ function App() {
   /*  CHECK IF THERE ARE COMPLETED TODOS AND THEN SET THE FILTER*/
   const handleShowCompleted = () => {
     const completedTodos = todos.filter((todo) => todo.completed);
-    if (completedTodos.length > 0) {
-      setFilter("completed");
-    } else {
+    if (!completedTodos.length > 0) {
       setFilter("all");
     }
+    setFilter("completed");
   };
 
   const handleAddTodo = (newTodo) => {
