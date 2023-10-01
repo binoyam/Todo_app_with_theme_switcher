@@ -262,6 +262,9 @@ input::placeholder {
   color: var(--BrightBlue);
   font-weight: 700;
 }
+.controls .number {
+  cursor: text;
+}
 .list-controls .active:hover {
   color: var(--LightGrayishBlue);
 }
@@ -273,24 +276,23 @@ input::placeholder {
   color: var(--DarkGrayishBlue);
 }
 /* STYLING TASKS LEFT TO DO
-2, LAYOUT (CONTROLS)
-3, RESPONSIVENESS
-4, THEME SWITHER
+1. THEME SWITHER
  */
 @media only screen and (max-width: 1350px) {
-  .main {
+  .main,
+  .title-theme-div {
     width: 55%;
   }
 }
 @media only screen and (max-width: 1050px) {
-  .main {
+  .main,
+  .title-theme-div {
     width: 65%;
   }
   .app {
     padding-bottom: 10rem;
   }
   .list-controls {
-    position: absolute;
     top: 5rem;
     transform: translate(-50%, 0);
     width: 100%;
@@ -298,5 +300,38 @@ input::placeholder {
     padding: 1rem 2rem;
     justify-content: center;
     background-color: var(--VeryDarkDesaturatedBlue);
+  }
+}
+@media only screen and (max-width: 700px){
+  .header{
+    background-image: url(./images/bg-mobile-dark.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .main,
+  .title-theme-div{
+    width: 80%;
+  }
+  .empty-todo{
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 500px){
+  .form input,
+  .todo-item,
+  .controls button{
+    font-size: 16px;
+  }
+  
+  .main,
+  .title-theme-div{
+    width: 90%;
+  }
+  .title{
+    letter-spacing: 10px;
+  }
+  .empty-todo{
+    font-size: 20px;
   }
 }
