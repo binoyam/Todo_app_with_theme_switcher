@@ -45,7 +45,10 @@ function App() {
     if (filter === "active") {
       return !todo.completed;
     } else if (filter === "completed") {
-      return todo.completed; 
+      const completedTodos = todos.filter((todo) => todo.completed);
+      if (completedTodos.length > 0) {
+        return completedTodos.length > 0 ? todo.completed : !todo.completed;
+      }
     }
     return true;
   });
@@ -72,7 +75,6 @@ function App() {
           showActive={handleShowActive}
           showAll={handleShowAll}
           showCompleted={handleShowCompleted}
-         
         />
       </main>
     </div>
