@@ -86,6 +86,7 @@ button {
   width: 100%;
   min-height: 100vh;
   background-color: var(--VeryDarkBlue);
+  padding-bottom: 2rem;
 }
 /* MAIN */
 .main {
@@ -288,7 +289,7 @@ input::placeholder {
   .title-theme-div {
     width: 65%;
   }
-  .app{
+  .app {
     padding-bottom: 167px;
   }
   .list-controls {
@@ -326,15 +327,32 @@ input::placeholder {
   .title-theme-div {
     width: 90%;
   }
- 
+
   .title {
     letter-spacing: 10px;
   }
   .empty-todo {
     font-size: 20px;
   }
-  .remove-btn{
+  .remove-btn {
     right: 1rem;
   }
-
+  .form input {
+    padding: 1rem 1rem 1rem 3rem;
+    height: 55px;
+  }
+  .form .circle {
+    width: 20px;
+    height: 20px;
+    left: 0.8rem;
+  }
+  .todo input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    left: 0.8rem;
+  }
+  .todo {
+    height: 55px;
+    padding: 1rem 1.5rem 1rem 3rem;
+  }
 }
