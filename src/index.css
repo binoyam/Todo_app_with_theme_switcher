@@ -4,15 +4,15 @@
   --CheckBackground: linear-gradient(90deg, #57ddff, #c058f3);
 
   /* LIGHT THEME COLORS*/
-  /* --VeryLightGray: hsl(0, 0%, 98%);
-  --VeryLightGrayishBlue: hsl(236, 33%, 92%);
-  --LightGrayishBlue: hsl(233, 11%, 84%);
-  --DarkGrayishBlue: hsl(236, 9%, 61%);
-  --VeryDarkGrayishBlue: hsl(235, 19%, 35%); */
+  /* --LM-VeryLightGray: hsl(0, 0%, 98%);
+  --LM-VeryLightGrayishBlue: hsl(236, 33%, 92%);
+  --LM-LightGrayishBlue: hsl(233, 11%, 84%);
+  --LM-DarkGrayishBlue: hsl(236, 9%, 61%);
+  --LM-VeryDarkGrayishBlue: hsl(235, 19%, 35%); */
 
   /* DARK THEME COLORS*/
-  --VeryDarkBlue: hsl(235, 21%, 11%);
-  --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --DM-VeryDarkBlue: hsl(235, 21%, 11%);
+  --DM-VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
   --LightGrayishBlue: hsl(234, 39%, 85%);
   --LightGrayishBlue1: hsl(236, 33%, 92%); /* (hover) */
   --DarkGrayishBlue: hsl(234, 11%, 52%);
@@ -85,7 +85,7 @@ button {
 .app {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--VeryDarkBlue);
+  background-color: var(--DM-VeryDarkBlue);
   padding-bottom: 2rem;
 }
 /* MAIN */
@@ -109,7 +109,7 @@ button {
   border-radius: 7px;
   border: none;
   outline: none;
-  background-color: var(--VeryDarkDesaturatedBlue);
+  background-color: var(--DM-VeryDarkDesaturatedBlue);
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
   color: var(--LightGrayishBlue);
@@ -144,7 +144,7 @@ input::placeholder {
   border-bottom-left-radius: 0;
   background-color: var(--VeryDarkGrayishBlue1);
   overflow: hidden;
-  /* box-shadow: 0px 5px 10px 2px var(--VeryDarkDesaturatedBlue); */
+  /* box-shadow: 0px 5px 10px 2px var(--DM-VeryDarkDesaturatedBlue); */
 }
 
 /* TODO ROW */
@@ -155,14 +155,12 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--VeryDarkDesaturatedBlue);
+  background-color: var(--DM-VeryDarkDesaturatedBlue);
   border-bottom: 1px solid var(--VeryDarkGrayishBlue);
   position: relative;
   cursor: pointer;
 }
-.todo:last-of-type{
-  border-radius: 0;
-}
+
 .todo:hover .remove-btn {
   display: flex;
 }
@@ -179,11 +177,15 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   line-height: 1;
-  background-color: var(--VeryDarkDesaturatedBlue);
+  background-color: var(--DM-VeryDarkDesaturatedBlue);
   border-bottom: 1px solid var(--VeryDarkGrayishBlue);
 }
 /* TODO-ITEM */
 .todo-item {
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: var(--LightGrayishBlue);
   font-size: 18px;
   cursor: pointer;
@@ -245,7 +247,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--VeryDarkDesaturatedBlue);
+  background-color: var(--DM-VeryDarkDesaturatedBlue);
   position: relative;
 }
 .list-controls {
@@ -255,7 +257,7 @@ input::placeholder {
   justify-content: space-between;
   gap: 1rem;
   top: 50%;
-  left: 50%;
+  left: 47%;
   transform: translate(-50%, -50%);
   transition: all 0.3s ease-out;
 }
@@ -302,12 +304,14 @@ input::placeholder {
   }
   .list-controls {
     top: 5rem;
+    left: 50%;
     transform: translate(-50%, 0);
     width: 100%;
-    height: 55px;
+    height: 65px;
     padding: 1rem 2rem;
     justify-content: center;
-    background-color: var(--VeryDarkDesaturatedBlue);
+    background-color: var(--DM-VeryDarkDesaturatedBlue);
+    border-radius: 7px;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -364,10 +368,10 @@ input::placeholder {
     padding: 1rem 1.5rem 1rem 3rem;
   }
   .todo input[type="checkbox"]:checked {
-    background: url(./images/icon-check.svg) no-repeat 4px 4px, var(--CheckBackground);
-}
-.controls{
-  height: 65px;
-
-}
+    background: url(./images/icon-check.svg) no-repeat 4px 4px,
+      var(--CheckBackground);
+  }
+  .controls {
+    height: 65px;
+  }
 }

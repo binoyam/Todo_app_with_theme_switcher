@@ -22,11 +22,11 @@ function Filter({ todos, clearCompleted, showActive, showAll, showCompleted }) {
           Active
         </button>
         <button onClick={showCompleted} className="completed">
-        Completed
+          Completed
         </button>
       </div>
       <button onClick={clearCompleted} className="clear-all">
-        Clear Completed 
+        Clear Completed
       </button>
     </div>
   );

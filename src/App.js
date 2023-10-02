@@ -10,7 +10,11 @@ import Filter from "./components/Filter";
 function App() {
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState("all");
+  const [isLightTheme, setIsLightTheme] = useState(false);
 
+  // const toggleTheme = () => {
+  //   setDarkTheme(!isLightTheme)
+  // }
   const handleShowAll = () => {
     setFilter("all");
   };
@@ -20,14 +24,19 @@ function App() {
   /*  CHECK IF THERE ARE COMPLETED TODOS AND THEN SET THE FILTER*/
   const handleShowCompleted = () => {
     const completedTodos = todos.filter((todo) => todo.completed);
-    if (!completedTodos.length > 0) {
+    if (completedTodos.length <= 0) {
       setFilter("all");
     }
-    setFilter("completed");
+    if (completedTodos.length > 0) {
+      setFilter("completed");
+    } else {
+      setFilter("all");
+    }
   };
 
   const handleAddTodo = (newTodo) => {
     setTodos([{ id: Date.now(), newTodo, completed: false }, ...todos]);
+    setFilter("all");
   };
 
   const handleCompleteTodo = (id) => {
@@ -66,15 +75,17 @@ function App() {
       <Header />
 
       <main className="main">
-        <Input onAddTodo={handleAddTodo} />
+        <Input theme={isLightTheme} onAddTodo={handleAddTodo} />
 
         <TodoList
+          theme={isLightTheme}
           todos={filteredTodos}
           onCompleteTodo={handleCompleteTodo}
           onRemoveTodo={handleRemoveTodo}
         />
         <Filter
-          todos={filteredTodos}
+          theme={isLightTheme}
+          todos={todos}
           clearCompleted={handleClearCompleted}
           showActive={handleShowActive}
           showAll={handleShowAll}

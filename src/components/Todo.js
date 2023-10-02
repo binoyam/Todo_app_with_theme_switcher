@@ -9,7 +9,6 @@ function Todo({ todo, onRemoveTodo, onCompleteTodo }) {
   const handleRemoveClick = () => {
     onRemoveTodo(todo.id);
   };
- 
 
   return (
     <li className="todo">
