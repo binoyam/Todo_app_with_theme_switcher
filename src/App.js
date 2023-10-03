@@ -10,11 +10,11 @@ import Filter from "./components/Filter";
 function App() {
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState("all");
-  // const [isLightTheme, setIsLightTheme] = useState(true);
-
-  // const toggleTheme = () => {
-  //   setIsLightTheme(!isLightTheme)
-  // }
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  /* THEME SWITCHER */
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
   const handleShowAll = () => {
     setFilter("all");
   };
@@ -76,22 +76,23 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <Header />
+    <div className={isDarkTheme ? "app" : "app light"}>
+      
+      <Header 
+      toggleTheme={toggleTheme} 
+      isDarkTheme={isDarkTheme} />
 
       <main className="main">
-        <Input 
-        // theme={isLightTheme} 
-        onAddTodo={handleAddTodo} />
+        <Input isDarkTheme={isDarkTheme} onAddTodo={handleAddTodo} />
 
         <TodoList
-          // theme={isLightTheme}
+          isDarkTheme={isDarkTheme}
           todos={filteredTodos}
           onCompleteTodo={handleCompleteTodo}
           onRemoveTodo={handleRemoveTodo}
         />
         <Filter
-          // theme={isLightTheme}
+          isDarkTheme={isDarkTheme}
           todos={todos}
           clearCompleted={handleClearCompleted}
           showActive={handleShowActive}

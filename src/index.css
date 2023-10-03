@@ -4,20 +4,20 @@
   --CheckBackground: linear-gradient(90deg, #57ddff, #c058f3);
 
   /* LIGHT THEME COLORS*/
-  /* --LM-VeryLightGray: hsl(0, 0%, 98%);
+  --LM-VeryLightGray: hsl(0, 0%, 98%);
   --LM-VeryLightGrayishBlue: hsl(236, 33%, 92%);
   --LM-LightGrayishBlue: hsl(233, 11%, 84%);
   --LM-DarkGrayishBlue: hsl(236, 9%, 61%);
-  --LM-VeryDarkGrayishBlue: hsl(235, 19%, 35%); */
+  --LM-VeryDarkGrayishBlue: hsl(235, 19%, 35%);
 
   /* DARK THEME COLORS*/
   --DM-VeryDarkBlue: hsl(235, 21%, 11%);
   --DM-VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
-  --LightGrayishBlue: hsl(234, 39%, 85%);
-  --LightGrayishBlue1: hsl(236, 33%, 92%); /* (hover) */
-  --DarkGrayishBlue: hsl(234, 11%, 52%);
-  --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
-  --VeryDarkGrayishBlue1: hsl(237, 14%, 26%);
+  --DM-LightGrayishBlue: hsl(234, 39%, 85%);
+  --DM-LightGrayishBlue1: hsl(236, 33%, 92%); /* (hover) */
+  --DM-DarkGrayishBlue: hsl(234, 11%, 52%);
+  --DM-VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --DM-VeryDarkGrayishBlue1: hsl(237, 14%, 26%);
 }
 
 * {
@@ -47,9 +47,11 @@ button {
   background-image: url(./images/bg-desktop-dark.jpg);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   z-index: 0;
 }
+/* HEADER LIGHT MODE*/
 .header.light{
   background-image: url(./images/bg-desktop-light.jpg);
 }
@@ -91,6 +93,10 @@ button {
   background-color: var(--DM-VeryDarkBlue);
   padding-bottom: 2rem;
 }
+/* APP LIGHT MODE */
+.app.light{
+  background-color: var(--LM-VeryLightGray);
+}
 /* MAIN */
 .main {
   width: 40%;
@@ -115,16 +121,16 @@ button {
   background-color: var(--DM-VeryDarkDesaturatedBlue);
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
-  color: var(--LightGrayishBlue);
+  color: var(--DM-LightGrayishBlue);
 }
 input::placeholder {
-  color: var(--DarkGrayishBlue);
+  color: var(--DM-DarkGrayishBlue);
 }
 .form .circle {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 1px solid var(--DarkGrayishBlue);
+  border: 1px solid var(--DM-DarkGrayishBlue);
   position: absolute;
   top: 50%;
   left: 1.5rem;
@@ -145,7 +151,7 @@ input::placeholder {
   border-radius: 7px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: var(--VeryDarkGrayishBlue1);
+  background-color: var(--DM-VeryDarkGrayishBlue1);
   overflow: hidden;
   /* box-shadow: 0px 5px 10px 2px var(--DM-VeryDarkDesaturatedBlue); */
 }
@@ -159,7 +165,7 @@ input::placeholder {
   align-items: center;
   justify-content: space-between;
   background-color: var(--DM-VeryDarkDesaturatedBlue);
-  border-bottom: 1px solid var(--VeryDarkGrayishBlue);
+  border-bottom: 1px solid var(--DM-VeryDarkGrayishBlue);
   position: relative;
   cursor: pointer;
 }
@@ -181,7 +187,7 @@ input::placeholder {
   justify-content: center;
   line-height: 1;
   background-color: var(--DM-VeryDarkDesaturatedBlue);
-  border-bottom: 1px solid var(--VeryDarkGrayishBlue);
+  border-bottom: 1px solid var(--DM-VeryDarkGrayishBlue);
 }
 /* TODO-ITEM */
 .todo-item {
@@ -189,7 +195,7 @@ input::placeholder {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: var(--LightGrayishBlue);
+  color: var(--DM-LightGrayishBlue);
   font-size: 18px;
   cursor: pointer;
   padding: 5px 5px 5px 0;
@@ -202,7 +208,7 @@ input::placeholder {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 2px solid var(--DarkGrayishBlue);
+  border: 2px solid var(--DM-DarkGrayishBlue);
   background: transparent;
   position: absolute;
   outline: none;
@@ -267,7 +273,7 @@ input::placeholder {
 .controls button {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
-  color: var(--VeryDarkGrayishBlue);
+  color: var(--DM-VeryDarkGrayishBlue);
   cursor: pointer;
 }
 /* ALL BUTTON*/
@@ -279,14 +285,14 @@ input::placeholder {
   cursor: text;
 }
 .list-controls .active:hover {
-  color: var(--LightGrayishBlue);
+  color: var(--DM-LightGrayishBlue);
 }
 .list-controls .completed:hover {
-  color: var(--LightGrayishBlue);
+  color: var(--DM-LightGrayishBlue);
 }
 
 .controls .clear-all:hover {
-  color: var(--DarkGrayishBlue);
+  color: var(--DM-DarkGrayishBlue);
 }
 /* STYLING TASKS LEFT TO DO
 1. THEME SWITHER
@@ -320,9 +326,9 @@ input::placeholder {
 @media only screen and (max-width: 700px) {
   .header {
     background-image: url(./images/bg-mobile-dark.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  }
+  .header.light{
+    background-image: url(./images/bg-mobile-light.jpg);
   }
   .main,
   .title-theme-div {
