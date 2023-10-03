@@ -19,7 +19,12 @@ function App() {
     setFilter("all");
   };
   const handleShowActive = () => {
-    setFilter("active");
+    const activeTodos = todos.filter((todo) => !todo.completed);
+    if (activeTodos.length <= 0) {
+      setFilter("all");
+    } else {
+      setFilter("active");
+    }
   };
   /*  CHECK IF THERE ARE COMPLETED TODOS AND THEN SET THE FILTER*/
   const handleShowCompleted = () => {
