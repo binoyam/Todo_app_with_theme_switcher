@@ -50,6 +50,9 @@ button {
   position: relative;
   z-index: 0;
 }
+.header.light{
+  background-image: url(./images/bg-desktop-light.jpg);
+}
 /* TITLE & THEME SWITCHER*/
 .title-theme-div {
   position: absolute;

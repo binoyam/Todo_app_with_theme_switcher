@@ -10,10 +10,10 @@ import Filter from "./components/Filter";
 function App() {
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState("all");
-  const [isLightTheme, setIsLightTheme] = useState(false);
+  // const [isLightTheme, setIsLightTheme] = useState(true);
 
   // const toggleTheme = () => {
-  //   setDarkTheme(!isLightTheme)
+  //   setIsLightTheme(!isLightTheme)
   // }
   const handleShowAll = () => {
     setFilter("all");
@@ -80,16 +80,18 @@ function App() {
       <Header />
 
       <main className="main">
-        <Input theme={isLightTheme} onAddTodo={handleAddTodo} />
+        <Input 
+        // theme={isLightTheme} 
+        onAddTodo={handleAddTodo} />
 
         <TodoList
-          theme={isLightTheme}
+          // theme={isLightTheme}
           todos={filteredTodos}
           onCompleteTodo={handleCompleteTodo}
           onRemoveTodo={handleRemoveTodo}
         />
         <Filter
-          theme={isLightTheme}
+          // theme={isLightTheme}
           todos={todos}
           clearCompleted={handleClearCompleted}
           showActive={handleShowActive}

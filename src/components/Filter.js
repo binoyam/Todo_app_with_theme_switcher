@@ -1,6 +1,6 @@
 import React from "react";
 
-function Filter({ todos, clearCompleted, showActive, showAll, showCompleted }) {
+function Filter({ theme, todos, clearCompleted, showActive, showAll, showCompleted }) {
   const CountItemsLeft = () => {
     return todos.filter((todo) => !todo.completed).length;
   };

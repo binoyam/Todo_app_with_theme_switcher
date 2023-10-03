@@ -1,7 +1,7 @@
 import React from "react";
 import Todo from "./Todo";
 
-function TodoList({ todos, onRemoveTodo, onCompleteTodo }) {
+function TodoList({ theme, todos, onRemoveTodo, onCompleteTodo }) {
   // console.log(todos);
   return (
     <ul className="list">

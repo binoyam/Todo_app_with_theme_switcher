@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Input({ onAddTodo }) {
+function Input({ theme, onAddTodo }) {
   const [newTodo, setNewTodo] = useState("");
 
   const handleInputChange = (e) => {
