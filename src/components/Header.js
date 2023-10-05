@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import DarkthemeIcon from "../images/icon-sun.svg";
 import LightthemeIcon from "../images/icon-moon.svg";
 

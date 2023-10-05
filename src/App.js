@@ -4,8 +4,7 @@ import Input from "./components/Input";
 import TodoList from "./components/TodoList";
 import Filter from "./components/Filter";
 /* FUNCTIONS LEFT TO DO
-2, DRAG AND DROP FUNCTION
-3, THEME SWITCHER FUNCTION
+1, DRAG AND DROP FUNCTION
  */
 function App() {
   const [todos, setTodos] = useState([]);
@@ -77,10 +76,7 @@ function App() {
 
   return (
     <div className={isDarkTheme ? "app" : "app light"}>
-      
-      <Header 
-      toggleTheme={toggleTheme} 
-      isDarkTheme={isDarkTheme} />
+      <Header toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
 
       <main className="main">
         <Input isDarkTheme={isDarkTheme} onAddTodo={handleAddTodo} />

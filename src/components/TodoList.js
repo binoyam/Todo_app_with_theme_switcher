@@ -9,7 +9,7 @@ function TodoList({ isDarkTheme, todos, onRemoveTodo, onCompleteTodo }) {
         todos.map((todo) => {
           return (
             <Todo
-            isDarkTheme={isDarkTheme}
+              isDarkTheme={isDarkTheme}
               todo={todo}
               key={todo.id}
               onRemoveTodo={onRemoveTodo}

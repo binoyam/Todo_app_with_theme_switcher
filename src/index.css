@@ -52,7 +52,7 @@ button {
   z-index: 0;
 }
 /* HEADER LIGHT MODE*/
-.header.light{
+.header.light {
   background-image: url(./images/bg-desktop-light.jpg);
 }
 /* TITLE & THEME SWITCHER*/
@@ -94,7 +94,7 @@ button {
   padding-bottom: 2rem;
 }
 /* APP LIGHT MODE */
-.app.light{
+.app.light {
   background-color: var(--LM-VeryLightGrayishBlue);
 }
 /* MAIN */
@@ -124,7 +124,7 @@ button {
   color: var(--DM-LightGrayishBlue);
 }
 /* INPUT + LIGHT MODE */
-.form .input.light{
+.form .input.light {
   background-color: var(--LM-VeryLightGray);
   color: var(--LM-VeryDarkGrayishBlue);
 }
@@ -144,7 +144,7 @@ button {
   cursor: pointer;
 }
 /* CIRCLE + LIGHT MODE */
-.form .circle.light{
+.form .circle.light {
   border: 1px solid var(--LM-LightGrayishBlue);
 }
 .form .circle:hover {
@@ -166,7 +166,7 @@ button {
   /* box-shadow: 0px 5px 10px 2px var(--DM-VeryDarkDesaturatedBlue); */
 }
 /* LIST + LIGHT MODE */
-.list.light{
+.list.light {
   background-color: var(--LM-VeryLightGray);
 }
 /* TODO ROW */
@@ -183,7 +183,7 @@ button {
   cursor: pointer;
 }
 /* TODO ROW + LIGHT MODE */
-.todo.light{
+.todo.light {
   background-color: var(--LM-VeryLightGray);
   border-bottom: 1px solid var(--LM-VeryLightGrayishBlue);
 }
@@ -207,7 +207,7 @@ button {
   border-bottom: 1px solid var(--DM-VeryDarkGrayishBlue);
 }
 /* EMPTY TODO + LIGHT MODE */
-.empty-todo.light{
+.empty-todo.light {
   background-color: var(--LM-VeryLightGray);
   color: var(--DM-VeryDarkBlue);
   border-bottom: 1px solid var(--LM-VeryLightGrayishBlue);
@@ -224,7 +224,7 @@ button {
   padding: 5px 5px 5px 0;
 }
 /* TODO-ITEM + LIGHT MODE */
-.todo-item.light{
+.todo-item.light {
   color: var(--LM-VeryDarkGrayishBlue);
 }
 /* CHECKBOX */
@@ -245,7 +245,7 @@ button {
   transform: translateY(-50%);
 }
 /* CHECKBOX + LIGHT MODE*/
-.todo input[type="checkbox"].light{
+.todo input[type="checkbox"].light {
   border: 2px solid var(--LM-LightGrayishBlue);
 }
 /* CHECKBOX+HOVER */
@@ -291,7 +291,7 @@ button {
   position: relative;
 }
 /* CONTROLS + LIGHT MODE */
-.controls.light{
+.controls.light {
   background-color: var(--LM-VeryLightGray);
 }
 .list-controls {
@@ -320,7 +320,7 @@ button {
 .controls .number {
   cursor: text;
 }
-.list-controls .active{
+.list-controls .active {
   font-weight: 700;
 }
 .list-controls .active:hover {
@@ -365,7 +365,7 @@ button {
   .app {
     padding-bottom: 167px;
   }
-  .list-controls.light{
+  .list-controls.light {
     background-color: var(--LM-VeryLightGray);
   }
   .list-controls {
@@ -384,7 +384,7 @@ button {
   .header {
     background-image: url(./images/bg-mobile-dark.jpg);
   }
-  .header.light{
+  .header.light {
     background-image: url(./images/bg-mobile-light.jpg);
   }
   .main,
