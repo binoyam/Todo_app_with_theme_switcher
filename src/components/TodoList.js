@@ -4,11 +4,12 @@ import Todo from "./Todo";
 function TodoList({ isDarkTheme, todos, onRemoveTodo, onCompleteTodo }) {
   // console.log(todos);
   return (
-    <ul className="list">
+    <ul className={isDarkTheme ? "list" : "list light"}>
       {todos.length ? (
         todos.map((todo) => {
           return (
             <Todo
+            isDarkTheme={isDarkTheme}
               todo={todo}
               key={todo.id}
               onRemoveTodo={onRemoveTodo}
