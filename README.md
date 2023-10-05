@@ -1,5 +1,5 @@
 # TODO APP with THEME SWITCHER
-[LIVE-DEMO](https://react-todo-app-css.netlify.app)
+[LIVE-DEMO](https://responsive-to-do-app.netlify.app)
 
 
 
@@ -12,4 +12,4 @@
 
 
 
-tasks left: drag & drop, theme switcher
+tasks left: drag & drop:please give me hints
