@@ -95,7 +95,7 @@ button {
 }
 /* APP LIGHT MODE */
 .app.light{
-  background-color: var(--LM-LightGrayishBlue);
+  background-color: var(--LM-VeryLightGrayishBlue);
 }
 /* MAIN */
 .main {
