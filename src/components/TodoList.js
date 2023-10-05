@@ -1,7 +1,7 @@
 import React from "react";
 import Todo from "./Todo";
 
-function TodoList({ theme, todos, onRemoveTodo, onCompleteTodo }) {
+function TodoList({ isDarkTheme, todos, onRemoveTodo, onCompleteTodo }) {
   // console.log(todos);
   return (
     <ul className="list">
@@ -17,7 +17,9 @@ function TodoList({ theme, todos, onRemoveTodo, onCompleteTodo }) {
           );
         })
       ) : (
-        <li className="empty-todo">Start Adding Tasks</li>
+        <li className={isDarkTheme ? "empty-todo" : "empty-todo light"}>
+          Start Adding Tasks
+        </li>
       )}
     </ul>
   );

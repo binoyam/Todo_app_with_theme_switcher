@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import crossIcon from "../images/icon-cross.svg";
 
-function Todo({ todo, onRemoveTodo, onCompleteTodo }) {
+function Todo({ isDarkTheme, todo, onRemoveTodo, onCompleteTodo }) {
   const handleCompleteClick = () => {
     onCompleteTodo(todo.id);
   };
@@ -11,10 +11,10 @@ function Todo({ todo, onRemoveTodo, onCompleteTodo }) {
   };
 
   return (
-    <li className="todo">
+    <li className={isDarkTheme ? "todo" : "todo light"}>
       <input
         id="checkbox"
-        className="checkbox"
+        className={isDarkTheme ? "checkbox" : "checkbox light"}
         type="checkbox"
         title="Mark/Unmark completed"
         checked={todo.completed}
@@ -24,7 +24,7 @@ function Todo({ todo, onRemoveTodo, onCompleteTodo }) {
       <label
         onClick={handleCompleteClick}
         style={todo.completed ? { textDecoration: "line-through" } : {}}
-        className="todo-item"
+        className={isDarkTheme ? "todo-item" : "todo-item light"}
       >
         {todo.newTodo}
       </label>

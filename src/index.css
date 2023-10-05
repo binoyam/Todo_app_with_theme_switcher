@@ -111,7 +111,7 @@ button {
   position: relative;
 }
 /* INPUT */
-.form input {
+.form .input {
   width: 100%;
   height: 65px;
   padding: 1rem 1rem 1rem 4rem;
@@ -123,9 +123,14 @@ button {
   font-size: 18px;
   color: var(--DM-LightGrayishBlue);
 }
-input::placeholder {
+.form .input.light{
+  background-color: var(--LM-VeryLightGray);
+  color: var(--LM-VeryDarkGrayishBlue);
+}
+.input::placeholder {
   color: var(--DM-DarkGrayishBlue);
 }
+
 .form .circle {
   width: 25px;
   height: 25px;
@@ -136,6 +141,9 @@ input::placeholder {
   left: 1.5rem;
   transform: translateY(-50%);
   cursor: pointer;
+}
+.form .circle.light{
+  border: 1px solid var(--LM-LightGrayishBlue);
 }
 .form .circle:hover {
   left: 1.7rem;
@@ -169,7 +177,10 @@ input::placeholder {
   position: relative;
   cursor: pointer;
 }
-
+.todo.light{
+  background-color: var(--LM-VeryLightGray);
+  border-bottom: 1px solid var(--LM-VeryLightGrayishBlue);
+}
 .todo:hover .remove-btn {
   display: flex;
 }
@@ -189,6 +200,11 @@ input::placeholder {
   background-color: var(--DM-VeryDarkDesaturatedBlue);
   border-bottom: 1px solid var(--DM-VeryDarkGrayishBlue);
 }
+.empty-todo.light{
+  background-color: var(--LM-VeryLightGray);
+  color: var(--DM-VeryDarkBlue);
+
+}
 /* TODO-ITEM */
 .todo-item {
   width: 90%;
@@ -199,6 +215,9 @@ input::placeholder {
   font-size: 18px;
   cursor: pointer;
   padding: 5px 5px 5px 0;
+}
+.todo-item.light{
+  color: var(--LM-VeryDarkGrayishBlue);
 }
 /* CHECKBOX */
 .todo input[type="checkbox"] {
@@ -216,6 +235,9 @@ input::placeholder {
   top: 50%;
   left: 1.5rem;
   transform: translateY(-50%);
+}
+.todo input[type="checkbox"].light{
+  border: 2px solid var(--LM-LightGrayishBlue);
 }
 /* CHECKBOX+HOVER */
 .todo .checkbox:hover {
