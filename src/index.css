@@ -95,7 +95,7 @@ button {
 }
 /* APP LIGHT MODE */
 .app.light{
-  background-color: var(--LM-VeryLightGray);
+  background-color: var(--LM-LightGrayishBlue);
 }
 /* MAIN */
 .main {
@@ -210,7 +210,7 @@ button {
 .empty-todo.light{
   background-color: var(--LM-VeryLightGray);
   color: var(--DM-VeryDarkBlue);
-
+  border-bottom: 1px solid var(--LM-VeryLightGrayishBlue);
 }
 /* TODO-ITEM */
 .todo-item {
@@ -223,6 +223,7 @@ button {
   cursor: pointer;
   padding: 5px 5px 5px 0;
 }
+/* TODO-ITEM + LIGHT MODE */
 .todo-item.light{
   color: var(--LM-VeryDarkGrayishBlue);
 }
@@ -243,6 +244,7 @@ button {
   left: 1.5rem;
   transform: translateY(-50%);
 }
+/* CHECKBOX + LIGHT MODE*/
 .todo input[type="checkbox"].light{
   border: 2px solid var(--LM-LightGrayishBlue);
 }
@@ -288,6 +290,10 @@ button {
   background-color: var(--DM-VeryDarkDesaturatedBlue);
   position: relative;
 }
+/* CONTROLS + LIGHT MODE */
+.controls.light{
+  background-color: var(--LM-VeryLightGray);
+}
 .list-controls {
   position: absolute;
   display: flex;
@@ -305,6 +311,7 @@ button {
   color: var(--DM-VeryDarkGrayishBlue);
   cursor: pointer;
 }
+
 /* ALL BUTTON*/
 .list-controls .all {
   color: var(--BrightBlue);
@@ -312,6 +319,9 @@ button {
 }
 .controls .number {
   cursor: text;
+}
+.list-controls .active{
+  font-weight: 700;
 }
 .list-controls .active:hover {
   color: var(--DM-LightGrayishBlue);
@@ -322,6 +332,21 @@ button {
 
 .controls .clear-all:hover {
   color: var(--DM-DarkGrayishBlue);
+}
+/* CONTROL BUTTONS + LIGHT MODE*/
+.controls.light .number {
+  color: var(--LM-VeryLightGrayishBlue);
+  cursor: text;
+}
+.list-controls.light .active:hover {
+  color: var(--DM-VeryDarkDesaturatedBlue);
+}
+.list-controls.light .completed:hover {
+  color: var(--DM-VeryDarkBlue);
+}
+
+.controls.light .clear-all:hover {
+  color: var(--DM-VeryDarkBlue);
 }
 /* STYLING TASKS LEFT TO DO
 1. THEME SWITHER
@@ -339,6 +364,9 @@ button {
   }
   .app {
     padding-bottom: 167px;
+  }
+  .list-controls.light{
+    background-color: var(--LM-VeryLightGray);
   }
   .list-controls {
     top: 5rem;

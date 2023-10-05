@@ -1,12 +1,19 @@
 import React from "react";
 
-function Filter({ theme, todos, clearCompleted, showActive, showAll, showCompleted }) {
+function Filter({
+  isDarkTheme,
+  todos,
+  clearCompleted,
+  showActive,
+  showAll,
+  showCompleted,
+}) {
   const CountItemsLeft = () => {
     return todos.filter((todo) => !todo.completed).length;
   };
 
   return (
-    <div className="controls">
+    <div className={isDarkTheme ? "controls" : "controls light"}>
       <button className="items-left">
         {CountItemsLeft() > 0 ? (
           <span className="number">{CountItemsLeft()} Items Left</span>
@@ -14,7 +21,7 @@ function Filter({ theme, todos, clearCompleted, showActive, showAll, showComplet
           <span className="number">No Tasks Left</span>
         )}
       </button>
-      <div className="list-controls">
+      <div className={isDarkTheme ? "list-controls" : "list-controls light"}>
         <button onClick={showAll} className="all">
           All
         </button>
